@@ -1,15 +1,39 @@
 @import "tailwindcss";
-
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer theme, base, components, utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+@theme {
+  --color-block: #0B0E12;
+  --color-dark: #06080c;
+  --color-green: #43AD28;
+  --color-red: #EB0237;
+  --color-red-dark: #A01131;
+  --color-orange: #EB6402;
+}
+@layer utilities {
+  .px-md {
+    padding-inline: 42px;
+  }
+  .py-53 {
+    padding-block: 53px;
+  }
+  .text-3xl {
+    font-size: 32px;
+  }
+  .bg-red {
+    background-color: var(--color-red);
+  }
+  .bg-green {
+    background-color: var(--color-green);
+  }
+  .bg-orange {
+    background-color: var(--color-orange);
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,6 +43,5 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-dark);
 }
