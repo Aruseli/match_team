@@ -22,7 +22,7 @@ export const MatchBlock = memo(function MatchBlock({
   status,
 }: MatchBlockProps) {
   return(
-    <div className="bg-block">
+    <div className="bg-block hover:shadow-2xs shadow-gray-800/50">
       <div className='px-9 py-4 flex justify-between items-center'>
         <div className='flex items-center gap-3'>
           <Image src='/mainIcon/icon.svg' alt='icon' width={32} height={32} />
